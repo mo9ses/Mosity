@@ -1,10 +1,7 @@
 import React from "react";
-import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { technologies } from "../constants";
-import { BallCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
@@ -22,13 +19,6 @@ const About = () => {
       >
         Hello. My name is Bryan Athanas and I'm a skilled aspiring cloud engineer with experience in TypeScript, JavaScript, Java, and Python. My goal is to create efficient, scalable, and user-friendly solutions in the future.
       </motion.p>
-      {/* <div className='mt-16 flex flex-row flex-wrap justify-center gap-10'>
-        {technologies.map((technology) => (
-          <div className='w-28 h-28' key={technology.name}>
-            <BallCanvas icon={technology.icon} />
-          </div>
-        ))}
-      </div> */}
     </>
   );
 };

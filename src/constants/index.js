@@ -1,28 +1,5 @@
-import {
-  aws,
-  typescript,
-  nodejs,
-  python,
-  java,
-  reactjs,
-  tailwind,
-  mongodb,
-  git,
-  docker,
-  threejs,
-  itf,
-  a,
-  network,
-  cios,
-  rot,
-  linkedin,
-  mail,
-  discord,
-  githubsquare,
-  instagram,
-} from "../assets";
 
-export const navLinks = [
+const navLinks = [
   {
     id: "home",
     title: "Home",
@@ -34,78 +11,7 @@ export const navLinks = [
   {
     id: "projects",
     title: "Projects",
-  },
-  {
-    id: "contact",
-    title: "Contact",
   }
-];
-
-const technologies = [
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "Java",
-    icon: java,
-  },
-  {
-    name: "Python",
-    icon: python,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "AWS",
-    icon: aws,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
-];
-
-const services = [
-  {
-    title: "Comptia ITF+",
-    icon: itf,
-  },
-  {
-    title: "Comptia A+",
-    icon: a,
-  },
-  {
-    title: "Comptia Network+",
-    icon: network,
-  },
-  {
-    title: "Comptia CIOS",
-    icon: cios,
-  },
-
 ];
 
 const projects = [
@@ -123,38 +29,11 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: rot,
+    image: "hi",
     source_code_link: "https://github.com/ROT-Utilities/ROT",
   },
 ];
 
 
-const platforms = [
-  {
-    title: "LinkedIn",
-    icon: linkedin,
-    link: "https://www.linkedin.com/in/bryan-athanas-6a8bb4314/",
-  },
-  {
-    title: "GitHub",
-    icon: githubsquare,
-    link: "https://github.com/mo9ses/",
-  },
-  {
-    title: "Discord",
-    icon: discord,
-    link: "https://discord.com/users/1129484163876147280",
-  },
-  {
-    title: "Mail",
-    icon: mail,
-    link: "mailto:mercydelmas17@gmail.com",
-  },
-  {
-    title: "Instagram",
-    icon: instagram,
-    link: "https://www.instagram.com/2fly4mo/",
-  }
-];
 
-export { services, technologies, projects, platforms };
+export { navLinks, projects };
