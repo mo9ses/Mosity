@@ -29,12 +29,18 @@
   font-family: 'Roboto', sans-serif;
   position: absolute;
   text-align: center;
-  font-size: 14vw;
+  font-size: 25vw;
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 10px;
   line-height: 0.8;
   hyphens: auto;
+}
+
+@media (min-width: 640px) {
+  #text-behind, #text-front, #text-behind-blur {
+    font-size: 14vw;
+  }
 }
 
 #text-behind {

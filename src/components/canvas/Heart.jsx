@@ -6,7 +6,7 @@ import { EquirectangularReflectionMapping } from 'three';
 
 import CanvasLoader from "../Loader";
 
-const hdrEquirect = new RGBELoader().load("./assets/gradients/ml_gradient_freebie_02.hdr", () => {
+const hdrEquirect = new RGBELoader().load("./assets/gradients/heart_gradient.hdr", () => {
   hdrEquirect.mapping = EquirectangularReflectionMapping;
 });
 
@@ -27,8 +27,8 @@ const HeartObject = () => {
 
   return (
     <mesh
-      scale={isLandscape ? 12 : 5}
-      position={[0, isLandscape ? -8 : -3.5, 0]}
+      scale={isLandscape ? 12 : 7}
+      position={[0, isLandscape ? -8 : -4.7, 0]}
     >
       <primitive
         object={Heart.scene}
@@ -44,9 +44,9 @@ const Heart = () => {
 
   return (
     <div className="headline-container">
-      <div id="text-behind">Moses<br />Trinity</div>
-      <div id="text-front">Moses<br />Trinity</div>
-      <div id="text-behind-blur">Moses<br />Trinity</div>
+      <div id="text-behind" className="sm:rotate-0 rotate-90">Moses<br />Trinity</div>
+      <div id="text-front" className="sm:rotate-0 rotate-90">Moses<br />Trinity</div>
+      <div id="text-behind-blur" className="sm:rotate-0 rotate-90">Moses<br />Trinity</div>
       <Canvas
         ref={canvasRef}
         className="canvas-container"
@@ -55,19 +55,9 @@ const Heart = () => {
         gl={{ preserveDrawingBuffer: true }}
         camera={{ position: [10, 5, 10], fov: 25 }}
       >
-        <OrbitControls enableZoom={false} autoRotate={true} autoRotateSpeed={1} maxPolarAngle={1.6} minPolarAngle={1.3} enableDamping={true} dampingFactor={0.85} enablePan={false} />
+        <OrbitControls enableZoom={false} autoRotate={true} autoRotateSpeed={3} maxPolarAngle={1.6} minPolarAngle={1.3} enableDamping={true} dampingFactor={0.85} enablePan={false} />
         <Suspense fallback={<CanvasLoader />}>
           <Environment map={hdrEquirect} />
-          {/* <ambientLight intensity={1} /> */}
-          {/* <directionalLight
-            castShadow
-            intensity={3}
-            position={[5, 10, 7.5]}
-            shadow-mapSize-width={2048}
-            shadow-mapSize-height={2048}
-            shadow-camera-far={50}
-            shadow-bias={-0.0001}
-          /> */}
           <HeartObject />
         </Suspense>
         <Preload all />
