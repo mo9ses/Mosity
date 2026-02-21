@@ -15,7 +15,12 @@ const ProjectCard = ({
   image
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div 
+      variants={fadeIn("up", "spring", 0, 0.75)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.70 }}
+    >
       <Tilt
         options={{max: 45, scale: 1, speed: 450}}
         className='bg-tertiary p-4 sm:p-5 rounded-2xl sm:w-[360px] w-full h-[380px] sm:h-[480px] md:h-[580px] flex flex-col'
@@ -40,13 +45,22 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()} className="mb-6">
+      <motion.div 
+        variants={textVariant()}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="mb-6"
+      >
         <h2 className={`${styles.sectionHeadText} text-white`}>A Collection Of Us</h2>
       </motion.div>
 
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
           className='mt-4 text-secondary text-[16px] sm:text-[17px] max-w-3xl leading-[28px] sm:leading-[30px] mx-auto text-center px-4'
         >
           This is a collection some of my favorite moments with you.

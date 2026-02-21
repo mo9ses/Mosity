@@ -5,10 +5,12 @@ import { HeartCanvas } from "./canvas";
 const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
-
+      
+      <a href='#about' className='absolute bottom-0 w-full h-48 cursor-pointer pointer-events-auto z-10' />
       <HeartCanvas />
 
-      <div id="downthing" className='absolute bottom-5 w-full flex justify-center items-center'>
+
+      <div id="downthing" className='absolute bottom-24 sm:bottom-10 w-full flex justify-center items-center'>
         <a href='#about'>
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
             <motion.div

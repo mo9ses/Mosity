@@ -18,28 +18,36 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 0;
+  top: -15vh;
   left: 0;
   right: 0;
   bottom: 0;
   pointer-events: none;
 }
 
+@media (min-width: 640px) {
+  .headline-container {
+    top: 0;
+  }
+}
+
 #text-behind, #text-front, #text-behind-blur {
   font-family: 'Roboto', sans-serif;
   position: absolute;
   text-align: center;
-  font-size: 25vw;
+  font-size: clamp(60px, 25vw, 200px);
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 10px;
   line-height: 0.8;
   hyphens: auto;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 @media (min-width: 640px) {
   #text-behind, #text-front, #text-behind-blur {
-    font-size: 14vw;
+    font-size: clamp(80px, 14vw, 250px);
   }
 }
 
