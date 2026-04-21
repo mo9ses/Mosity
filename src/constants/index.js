@@ -60,6 +60,18 @@ const collections = [
     description: "This is when we walked from your house to mine and you wanted to wash the sand off your dirt... just to put them back in the dirt.",
     image: "image015"
   },
+  {
+    description: "This is a picture you took of us randomly when we were at Sea World in Orlando together.",
+    image: "image016"
+  },
+  {
+    description: "This is when you came to my house in April 2026 and I was trying to sleep.",
+    image: "image017"
+  },
+  {
+    description: "This is you doing my makeup while at my house. My mom was hating on it because she thought she could do better.",
+    image: "image018"
+  },
 ];
 
 
