@@ -10,7 +10,7 @@ function buildAbout(): HTMLElement {
   heading.textContent = "What You Mean To Me.";
   animateOnView(heading, "slideDown");
 
-  const text = "Trinity, you mean so much to me and I'm so glad I met you. You are the most beautiful girl in the world and I love spending time with you. There is absolutely nothing I would change about you other than your last name. I will always love you and care for you.";
+  const text = "Trinity, I cannot put into words how much you mean to me. It feels like we started dating yesterday, but we've already been through so much together and made so many memories. I enjoy spending my time with you and I can't wait to make more memories with you.";
 
   const para = document.createElement("p");
   para.className = "about-text";
@@ -29,7 +29,7 @@ function buildAbout(): HTMLElement {
       i++;
       if (i >= text.length) {
         clearInterval(interval);
-        cursor.className = "typewriter-cursor typewriter-cursor--done";
+        cursor.remove();
       }
     }, 30);
   }, { threshold: 0.5 });
